@@ -1,0 +1,109 @@
+* {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    list-style-type: none;
+  }
+.sidenav {
+    height: 80%;
+    width: 55px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.219);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.sidenav a {
+    padding: 30px 8px 6px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+  }
+  .header
+  {
+    padding: 30px;
+    text-align: left;
+    background: #080808b9;
+    color: white;
+    font-size: 30px;
+    margin-left: 55px;
+    height: 37%;
+    width:93%;
+  }
+  .headerBtn a
+  {
+    font-size: 15px;
+    color: white;
+    float: left;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 120px 10px 20px;
+  }
+  .headerContent
+  {
+    float: left;
+    margin-left: 50px;
+  }
+  .headerImg
+  {
+    float: left;
+  }
+  .CurrentPlayDiv
+  {
+    float: left;
+  }
+  .currentPlayImg
+  {
+    height: 100px;
+    width: 100px;
+    float: left;
+  }
+  .currentSongInfo
+  {
+     float: left;
+     color: white;
+     margin-left:2%
+  }
+  .footerbtns
+  {
+    float: right;
+  }
+  .footerbtns a
+  {
+    padding: 10px 70px;
+    font-size: 25px;
+    color: white;
+    float: left;
+  }
+  .footer {
+    margin-left: 0px;
+    position: absolute;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 99%;
+    height: 16%;
+    background: rgba(26, 16, 159, 0.721);
+}
+  table {
+    border-collapse: collapse;
+    margin-left: 60px;
+    width: 95%;
+  }
+  
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(17, 17, 17, 0.219);
+  }
+  .btn {
+    border: 1px solid black;
+    background-color: white;
+    color: blue;
+    font-weight: boldfont;
+  }
