@@ -41,8 +41,7 @@ The browser's main components are:
     5.	UI backend: used for drawing basic widgets like combo boxes and windows. This backend exposes a generic interface that is not platform specific. Underneath it uses operating system user interface methods.
     6.	JavaScript interpreter: Used to parse and execute JavaScript code.
     7.	Data storage: This is a persistence layer. The browser may need to save all sorts of data locally, such as cookies. Browsers also support storage mechanisms such as localStorage, IndexedDB, WebSQL and FileSystem.
-   
-   ![alt text](https://github.com/pesto-students/p4-aafaq-NirajMourya/blob/week1/Week-1/Excercise 1.1/ComponentsofBrowser.png) 
+   ![alt text](https://github.com/pesto-students/p4-aafaq-NirajMourya/blob/a3e1a0ac9f64bb4a61be0f396a3bf01dd4f5fb72/Week-1/Excercise%201.1/ComponentsofBrowser.png) 
 
 Rendering Engine
 
@@ -56,12 +55,12 @@ Rendering Engine
     The rendering engine uses parsers to convert bits of data into meaningful information which can be used by the browser to render a webpage. The rendering engine has two different parsers, one for HTML and one for CSS.
 
 HTML parsing
-    The HTML parser takes bits of data as input and creates a logical representation of the HTML document in the memory of the device. 
-    
-    This logical representation of data is known as the DOM structure and represents the HTML data in a hierarchical manner.
+
+    The HTML parser takes bits of data as input and creates a logical representation of the HTML document in the memory of the device.This logical representation of data is known as the DOM structure and represents the HTML data in a hierarchical manner.
     
     To create the DOM structure, the HTML parser performs several steps that can be described as follows
-    ![alt text](https://github.com/pesto-students/p4-aafaq-NirajMourya/blob/week1/Week-1/Excercise 1.1/HTMLParsing.jpg)
+ ![alt text](https://github.com/pesto-students/p4-aafaq-NirajMourya/blob/a3e1a0ac9f64bb4a61be0f396a3bf01dd4f5fb72/Week-1/Excercise%201.1/HTMLParsing.jpg)
+     
         •	Characterisation extracts the characters from the bytes of information that the HTML parser gets from the network layer.
         •	Tokenization finds the tokens in a stream of characters that help the browser in determining the structure of the data.
         •	Node creation after identifying the tokens and the information contained in them, the browser creates memory nodes to hold this data.
@@ -85,7 +84,8 @@ Creating the rendering tree and layout for the webpage
 
     Once the DOM has been created, and the CSS parser has completed parsing the CSS file, the rendering engine uses a style engine to join both CSSOM and DOM. This creates a rendering tree which contains information about the structure and style of the webpage, which is to be rendered. The rendering tree only consists of visible nodes and does not have any nodes that are invisible to the user on the screen.
 
-    ![alt text](https://github.com/pesto-students/p4-aafaq-NirajMourya/blob/week1/Week-1/Excercise 1.1/RenderingTreeCreation.jpg)
+   ![alt text](https://github.com/pesto-students/p4-aafaq-NirajMourya/blob/a3e1a0ac9f64bb4a61be0f396a3bf01dd4f5fb72/Week-1/Excercise%201.1/RenderingTreeCreation.jpg)
+   
     After creating the rendering tree, the rendering engine starts the layout process. This process takes into consideration the resolution of the screen and how each element should be placed on the device. It also calculates the size of each element that is going to be rendered on the screen and its relative position to other elements.
     Now that the rendering engine has all the information about the webpage in a format that our system can understand, we can begin to render the page on the browser.
 
@@ -96,6 +96,8 @@ Painting the canvas and compositing the webpage on the screen
     The painting operation occurs in a layered format, and the rendering engine creates multiple layers of elements to create the webpage. This layered structure helps the browser to make changes faster when the user interacts with the webpage.
     
     Once all the layers have been created, the rendering engine sends this information to the user interface, displaying the webpage on the screen. This process is known as compositing the webpage and is the last step performed by the rendering engine.
-    ![alt text](https://github.com/pesto-students/p4-aafaq-NirajMourya/blob/week1/Week-1/Excercise 1.1/Painting.jpg)
+    
+   ![alt text](https://github.com/pesto-students/p4-aafaq-NirajMourya/blob/a3e1a0ac9f64bb4a61be0f396a3bf01dd4f5fb72/Week-1/Excercise%201.1/Painting.jpg)
+    
     This process of creating the webpage from bits of data is known as the critical rendering path and is the main determinant for the performance of any webpage you visit on the Internet.
 
