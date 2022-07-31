@@ -18,21 +18,25 @@
 #Box1
 {
     background-color: lightgreen;
+    transform-origin:top left
 }
 
 #Box2
 {
     background-color: lightseagreen;
+    transform-origin:top right
 }
 
 #Box3
 {
     background-color: lightsalmon;
+    transform-origin:bottom left
 }
 
 #Box4
 {
     background-color: lightskyblue;
+    transform-origin:bottom right
 }
 
 #HiddenText
@@ -41,15 +45,15 @@
     position: absolute;
 }
 
-#Box1:hover {
-    transform: rotate(-90deg);
+#Box:hover > #Box1 {
+    transform: rotate(90deg);
 }
-#Box2:hover {
-    transform:  rotate(90deg);
-}
-#Box3:hover {
+#Box:hover > #Box2{
     transform:  rotate(-90deg);
 }
-#Box4:hover {
+#Box:hover > #Box3 {
+    transform:  rotate(-90deg);
+}
+#Box:hover > #Box4 {
     transform: rotate(90deg);
 }
