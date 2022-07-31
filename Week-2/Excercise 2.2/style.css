@@ -1,0 +1,40 @@
+#Box
+{
+   width: 200px;
+   height: 200px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin: 200px;
+}
+
+#Box > div
+{
+    width: 100px;
+    height: 100px;
+}
+
+#Box1
+{
+    background-color: lightgreen;
+}
+
+#Box2
+{
+    background-color: lightseagreen;
+}
+
+#Box3
+{
+    background-color: lightsalmon;
+}
+
+#Box4
+{
+    background-color: lightskyblue;
+}
+
+#HiddenText
+{
+    margin-bottom: 90px;
+}
