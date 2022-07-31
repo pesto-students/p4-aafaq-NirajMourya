@@ -2,9 +2,6 @@
 {
    width: 200px;
    height: 200px;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
    margin: 200px;
 }
 
@@ -12,6 +9,10 @@
 {
     width: 100px;
     height: 100px;
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    float: left;
 }
 
 #Box1
@@ -37,4 +38,18 @@
 #HiddenText
 {
     margin-bottom: 90px;
+    position: absolute;
+}
+
+#Box1:hover {
+    transform: rotate(-90deg);
+}
+#Box2:hover {
+    transform:  rotate(90deg);
+}
+#Box3:hover {
+    transform:  rotate(-90deg);
+}
+#Box4:hover {
+    transform: rotate(90deg);
 }
