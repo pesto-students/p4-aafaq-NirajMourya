@@ -43,6 +43,7 @@
 {
     margin: 90px 0px 0px 90px;
     position: absolute;
+    z-index: -1;
 }
 
 #Box:hover > #Box1 {
