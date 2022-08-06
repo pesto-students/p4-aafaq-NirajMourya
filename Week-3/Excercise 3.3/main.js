@@ -1,4 +1,4 @@
-createIncrement()                                //This function is executed when createIncrement is called at line no. 20 & It executes only once
+function createIncrement()                                //This function is executed when createIncrement is called at line no. 20 & It executes only once
 {
     let count = 0;                               //Sets the count variable as 0
     function increment()                         //It increments the count 'variable', since the function does not have 'count' variable it increments the parent's 'count' variable
