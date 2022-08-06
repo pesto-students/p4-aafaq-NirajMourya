@@ -16,8 +16,9 @@ function memoize(fn)
             return cache.get(key)
         }
 
-        cache.set(key,args.reduce(fn))
-        return cache.get(key)        
+        cache.set(key,args.reduce(fn));
+        //console.log(cache);
+        return cache.get(key);     
      }
 }
 
@@ -29,3 +30,18 @@ console.log(memoizeAdd(100,100));
 console.log(memoizeAdd(100));
 console.log(memoizeAdd(100,200));
 console.log(memoizeAdd(100,100));
+console.log(memoizeAdd(100,100,100,300));
+
+/*
+time(() => memoizeAdd(100,100,100,100,100,100,100,300))
+time(() => memoizeAdd(100))
+time(() => memoizeAdd(100,200))
+time(() => memoizeAdd(100,100))
+time(() => memoizeAdd(100,100,100,100,100,100,100,300))
+
+function time(fn)
+{
+    console.time();
+    fn();
+    console.timeEnd();
+}*/
