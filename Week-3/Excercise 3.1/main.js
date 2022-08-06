@@ -10,13 +10,14 @@ function memoize(fn)
     const cache = new Map();
      return function(...args)
      {
-        if(cache.has(Key))
+        const key = args.toString();
+        if(cache.has(key))
         {
-            return cache.get(Key)
+            return cache.get(key)
         }
 
-        cache.set(Key,fn(...args))
-        return cache.get(Key)        
+        cache.set(key,fn(...args))
+        return cache.get(key)        
      }
 }
 
@@ -24,7 +25,7 @@ function memoize(fn)
 const memoizeAdd = memoize(add);
 
 //Calling Function
-memoizeAdd(100,100);
-memoizeAdd(100);
-memoizeAdd(100,200);
-memoizeAdd(100,100);
+console.log(memoizeAdd(100,100));
+console.log(memoizeAdd(100));
+console.log(memoizeAdd(100,200));
+console.log(memoizeAdd(100,100));
