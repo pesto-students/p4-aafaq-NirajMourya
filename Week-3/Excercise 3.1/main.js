@@ -16,7 +16,7 @@ function memoize(fn)
             return cache.get(key)
         }
 
-        cache.set(key,fn(...args))
+        cache.set(key,args.reduce(fn))
         return cache.get(key)        
      }
 }
