@@ -1,7 +1,7 @@
 //Reducer method:
-function add(a,b)
+function add(...args)
 {
-    return a+b;
+    return args.reduce((a,b) => { return a + b});
 }
 
 //Defining memoize function
@@ -15,8 +15,8 @@ function memoize(fn)
         {
             return cache.get(key)
         }
-
-        cache.set(key,args.reduce(fn));
+        
+        cache.set(key,fn(...args));
         //console.log(cache);
         return cache.get(key);     
      }
