@@ -1,6 +1,24 @@
 function createStack() 
 {
     let items = [];                   // 'items' is encapsulated and will  only be accessible to methods within and not outside of createStack scope
+    function push(item)                    //Adds an item on stack 
+    {
+        items.push(item);
+    }
+    function pop() {                      //Return the last item in stack
+        return items.pop();
+    }
+
+    return {
+        push,
+        pop
+    }
+}
+
+/*
+function createStack() 
+{
+    let items = [];                   // 'items' is encapsulated and will  only be accessible to methods within and not outside of createStack scope
     return {
         push(item)                    //Adds an item on stack 
         {
@@ -10,14 +28,14 @@ function createStack()
             return items.pop();
         }
     };
-}
+}*/
 
 const stack = createStack();         //An Object Containing two functions is returned
 //Since the stack object doesn't have any property with name 'items'
 //below operations are performed on the stack is done on the items array present in it's lexical scope
 stack.push(10);
 stack.push(5);
-stack.pop();
+console.log(stack.pop());
 console.log(stack.items);  //Hence, when we try to access a property which does not exist it give us 'undefined'
 
 //In the below code the reason it's accessible outside is the 'items' variable is returned when createStack is called
