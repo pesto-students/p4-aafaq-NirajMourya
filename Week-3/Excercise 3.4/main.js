@@ -1,19 +1,3 @@
-function createStack() 
-{
-    let items = [];                   // 'items' is encapsulated and will  only be accessible to methods within and not outside of createStack scope
-    function push(item)                    //Adds an item on stack 
-    {
-        items.push(item);
-    }
-    function pop() {                      //Return the last item in stack
-        return items.pop();
-    }
-
-    return {
-        push,
-        pop
-    }
-}
 
 /*
 function createStack() 
