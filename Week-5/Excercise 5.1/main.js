@@ -2,7 +2,14 @@ function  doTask1()
 {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve("Task 1 Completed");
+            if(true)
+            { 
+                resolve("Task 1 Completed");
+            }
+            else
+            {
+                reject(new Error("Task 1 Failed"));
+            }
         }, 500);
     });
 }
@@ -11,7 +18,14 @@ function  doTask2()
 {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve("Task 2 Completed");
+            if(true)
+            { 
+                resolve("Task 2 Completed");
+            }
+            else
+            {
+                reject(new Error("Task 2 Failed"));
+            }
     }, 500);
     });
 }
@@ -20,7 +34,14 @@ function  doTask3()
 {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve("Task 3 Completed");
+            if(true)
+            { 
+                resolve("Task 3 Completed");
+            }
+            else
+            {
+                reject(new Error("Task 3 Failed"));
+            }
     }, 500);
     });
 }
@@ -40,3 +61,4 @@ async function asyncCall() {
 }
 
 asyncCall();
+
