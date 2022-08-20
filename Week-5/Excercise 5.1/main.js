@@ -10,7 +10,7 @@ function  doTask1()
             {
                 reject(new Error("Task 1 Failed"));
             }
-        }, 500);
+        }, 2000);
     });
 }
 
@@ -26,7 +26,7 @@ function  doTask2()
             {
                 reject(new Error("Task 2 Failed"));
             }
-    }, 500);
+    },2000);
     });
 }
 
@@ -42,7 +42,7 @@ function  doTask3()
             {
                 reject(new Error("Task 3 Failed"));
             }
-    }, 500);
+    }, 2000);
     });
 }
 
@@ -62,3 +62,29 @@ async function asyncCall() {
 
 asyncCall();
 
+async function* generatorFunction() {
+        let Task1 = yield doTask1().then((Task1_data) => 
+        {
+            console.log(Task1_data);
+        }).catch((err) => {
+            console.log('Error Occurred: ',err);
+        });
+        let Task2 = yield doTask2().then((Task2_data) => 
+        {
+            console.log(Task2_data);
+        }).catch((err) => {
+            console.log('Error Occurred: ',err);
+        });
+        let Task3 = yield doTask3().then((Task3_data) => 
+        {
+            console.log(Task3_data);
+        }).catch((err) => {
+            console.log('Error Occurred: ',err);
+        });
+        return {done:true};
+}
+
+const iterator = generatorFunction();
+iterator.next();
+iterator.next();
+iterator.next();
