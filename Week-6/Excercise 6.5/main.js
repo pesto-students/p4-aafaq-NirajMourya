@@ -15,5 +15,5 @@ var countKDifference = function(nums, k) {
 console.log(countKDifference([3,2,1,5,4],2)); //return 1
 console.log(countKDifference([3,2,1,5,4],5)); //return 0
 
-//Time complexity is O(n*(n-1))
+//Time complexity is O(n^2)
 //Space complexity is O(1)
