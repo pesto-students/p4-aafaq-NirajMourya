@@ -1,19 +1,18 @@
 //time complexity is O(n)
 //space complexity is O(n)
+import Stack from '../CommonCode/stack.js'
 
 var isValid = function(s) {
-    let stack = [];
+    let stack = new Stack();
     for(let i = 0;i<s.length;i++)
     {
-        console.log(s[i]);
         if(s[i] === '(' || s[i] === '{' || s[i] === '[')
            stack.push(s[i]);
         else
         {
-            if(stack.length !== 0)
+            if(stack.size !== 0)
             {
                 let temp = stack.pop(); 
-                console.log(temp);
                 if(temp === '(' && s[i] !== ")" ||
                    temp === '{' && s[i] !== "}" ||
                    temp === '[' && s[i] !== "]")
@@ -22,9 +21,10 @@ var isValid = function(s) {
             else
                 return false;
         }
-        console.log(stack)
     }
-    if(stack.length === 0)
+    if(stack.isEmpty())
        return true;
     return false;
   };
+
+  console.log(isValid("{[]}{()}"));

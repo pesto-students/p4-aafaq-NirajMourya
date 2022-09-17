@@ -1,4 +1,4 @@
-import Stack from '../CommonCode/stack.mjs'
+import Stack from '../CommonCode/stack.js'
 class Queue
 {
     constructor()
