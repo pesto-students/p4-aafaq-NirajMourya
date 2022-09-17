@@ -1,6 +1,20 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Below code is the naive attempt at solving the issue
 //time complexity is O(n*n)
 //space complexity is O(n)
-function nextGreaterElements(nums)
+/*function nextGreaterElements(nums)
 {    
     let GreaterArray = [];
     for(let i = 0;i<nums.length;i++)
@@ -21,4 +35,4 @@ function nextGreaterElements(nums)
     return GreaterArray;
 }
 
-console.log(nextGreaterElements([6,8,0,1,3]));
+console.log(nextGreaterElements([6,8,0,1,3]));*/
