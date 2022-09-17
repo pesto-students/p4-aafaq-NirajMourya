@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Below code is the naive attempt at solving the issue
 //time complexity is O(n*n)
 //space complexity is O(n)

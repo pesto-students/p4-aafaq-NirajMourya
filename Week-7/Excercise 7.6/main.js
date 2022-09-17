@@ -1,9 +1,10 @@
+import Stack from '../CommonCode/stack.mjs'
 class Queue
 {
     constructor()
     {
-        this.s1 = [];    //stack for enqueue
-        this.s2 = [];     //stack for dequeue
+        this.s1 = new Stack();    //stack for enqueue
+        this.s2 = new Stack();     //stack for dequeue
     }
 
     enqueue(num)
@@ -13,14 +14,14 @@ class Queue
  
     dequeue()                //pop operation takes O(n) time
     {
-         if(this.s2.length == 0)
+         if(this.s2.isEmpty())
          {
-            if(this.s1.length == 0)
+            if(this.s1.isEmpty())
             {
                 return -1;
             }
             
-            while(this.s1.length != 0)
+            while(this.s1.size() != 0)
             {
                 this.s2.push(this.s1.pop());
             }   
