@@ -1,3 +1,34 @@
+import Stack from '../CommonCode/stack.js'
+//time complexity is O(n)
+//space complexity is O(n)
+function nextGreaterElements(nums)
+{
+    let stack = new Stack();
+    let GreaterArray = new Array(nums.length).fill(-1);
+    for(let i = 0;i<nums.length;i++)
+    {
+        if (stack.isEmpty()) {
+            stack.push(i);       // Pushing the index
+            continue;
+        }
+        if (nums[i] <= nums[stack.peek()]) 
+        {
+            stack.push(i)
+        }
+        else 
+        { 
+            while(!stack.isEmpty() && nums[i] > nums[stack.peek()])
+            {
+                GreaterArray[stack.peek()] = nums[i];
+                stack.pop();
+            }
+            stack.push(i);
+        }
+    }
+    return GreaterArray;
+}
+
+
 //Below code is the naive attempt at solving the issue
 //time complexity is O(n*n)
 //space complexity is O(n)
@@ -20,6 +51,6 @@
         }
     }
     return GreaterArray;
-}
+}*/
 
-console.log(nextGreaterElements([6,8,0,1,3]));*/
+console.log(nextGreaterElements([6,5,4,3,7]));
