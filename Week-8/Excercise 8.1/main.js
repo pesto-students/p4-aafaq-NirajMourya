@@ -67,3 +67,6 @@ let arr = [5,3,6,2,4,7,9,14,21];
 let root = createTree(arr);
 preorder(root);
 console.log("Tree height "+findTreeDepth(root)); //Tree height 4
+
+//Time Complexity is O(2^n)
+//Space Complexity is O(n)

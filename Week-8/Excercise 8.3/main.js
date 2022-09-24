@@ -77,3 +77,6 @@ console.log("Pre Order Traversal");
 preorder(root);
 console.log("Level Order Traversal");
 LevelOrderTraversal(root);
+
+//Time Complexity is O(n)
+//Space Complexity is O(n)

@@ -76,3 +76,6 @@ let arr = [9,4,14,3,5,13,70]; //Is a BST
 let root = createTree(arr);
 inorder(root);
 console.log(isBST(root));
+
+//Time Complexity is O(2^n)
+//Space Complexity is O(n)
