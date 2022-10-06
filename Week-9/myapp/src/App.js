@@ -25,13 +25,13 @@ function App(props) {
     setTasks(updatedTasks);
   } 
   const taskList = tasks.map(task => (
-    <ToDo id={task.id} name={task.name} completed={task.completed} deleteTask={deleteTask} toggleTaskCompleted={toggleTaskCompleted} />
+    <ToDo id={task.id} name={task.name} key={task.id} completed={task.completed} deleteTask={deleteTask} toggleTaskCompleted={toggleTaskCompleted} />
   ));
   return (
     <div className="App">
      <h1>ToDo App</h1>
      <Form  addTask={addTask} />
-     <ul>
+     <ul className="todoList">
         {taskList}
       </ul>
     </div>
