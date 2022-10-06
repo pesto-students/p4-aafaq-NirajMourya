@@ -1,5 +1,5 @@
-import React, {useState, useRef, useEffect} from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from "react";
+import { RiDeleteBin6Line } from 'react-icons/ri'
 function ToDo(props)
 {
     const {id,name,completed,deleteTask,toggleTaskCompleted} = props;
@@ -10,10 +10,8 @@ function ToDo(props)
             <p className={completed?"todoCompleted":"todoPending"}>
                 {name}
             </p>
-            <button type="button" className="btn btn-labeled btn-danger" onClick={() => deleteTask(id)}>
-               {/* <FontAwesomeIcon icon="fa-solid fa-trash" /> */}
-               <i className="fa-solid fa-trash"></i>
-               Delete
+            <button type="button" className="btn btn-labeled deletebtn" onClick={() => deleteTask(id)}>
+            <RiDeleteBin6Line color="#B4161B" />
             </button>
     </div>
     );

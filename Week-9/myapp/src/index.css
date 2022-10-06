@@ -1,7 +1,7 @@
 body
 {
    text-align: center;
-   background-color:rgb(243, 234, 234);
+   background-color:rgb(250, 246, 246);
 }
 .todoItem
 {
@@ -43,4 +43,10 @@ body
 .addtodo
 {
   width: 6%; 
+}
+
+.deletebtn
+{
+  border: 1px solid maroon;
+  background: blanchedalmond;
 }
