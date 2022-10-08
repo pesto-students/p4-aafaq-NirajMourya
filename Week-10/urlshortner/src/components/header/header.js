@@ -2,14 +2,14 @@ import {Link } from "react-router-dom"
 function Header()
 {
     return (
-        <header>
-            <div>
+        <header className="header">
+            <div className="SiteName">
                Shortly
             </div>
             <div>
-                <ul>
-                <li className='navItem'><Link className="navLink" to="/">Home</Link></li>
-                <li className='navItem'><Link className="navLink" to="/contactus">Contact Us</Link></li>
+                <ul className="menu">
+                <li className='navItem'><Link className="menulinks" to="/">Home</Link></li>
+                <li className='navItem'><Link className="menulinks" to="/contactus">Contact Us</Link></li>
                 </ul>
             </div>
         </header>

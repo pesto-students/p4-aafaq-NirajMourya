@@ -1,13 +1,141 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body
+{
+    margin: 0;
+    background-color: ghostwhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between
+}
+footer
+{
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background: #1abc9c;
+   color: white;
+   text-align: center;
+   position: absolute;
+}
+
+input[type=url] {
+  padding: 14px 20px;
+  margin: 8px 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.shortenBtn
+{
+    background: #03c6c7;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    min-width: -webkit-max-content;
+    min-width: max-content;
+    padding: 14px 20px;
+    font-size: 20px;
+}
+
+.shortenBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.menu
+{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style-type: none;
+  font-size: 20px;
+}
+.menulinks
+{
+  text-decoration: none;
+  color: white;
+}
+.SiteName
+{
+  font-family: cursive;
+  font-size: 25px;
+  align-self: center;
+}
+
+.home
+{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.copyDiv
+{
+  width: 70%;
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.LinkDiv
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  border-radius: 5px;
+}
+
+.copyBtn
+{
+    background: #03c6c7;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+.originalLink
+{
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  padding: 10px;
+  color: black;
+}
+
+.shortLink
+{
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  padding: 10px;
+  color: #03c6c7;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  padding: 8px 40px;
+}
+
+th {
+  background: #c0dede;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }

@@ -50,24 +50,28 @@ function Home()
         toast.success("Url Copied !!!");  
     }
     return (
-        <div>
+        <div className="home">
         <div>
             <input type="url" placeholder="Please enter URL" value={inputURL} onChange ={ (e) => setInputURL(e.target.value)}/>
-            <button onClick={ShortURLFun} disabled={!isUrlValid(inputURL)}>
+            <button onClick={ShortURLFun} className="shortenBtn" disabled={!isUrlValid(inputURL)}>
               Shorten it!
             </button>
         </div>
         {
             shortenLink !== "" ?
             (
-                <div>
-                <a href={originalLink}>
+                <div className="copyDiv">
+                <div className="LinkDiv">
+                <a href={originalLink} className="originalLink">
                    {originalLink}
                 </a>
-                <a href={shortenLink}>
+                </div>
+                <div className="LinkDiv">
+                <a href={shortenLink} className="shortLink">
                     {shortenLink}
                 </a>
-                <button onClick={copyURL}>Copy</button>
+                <button  onClick={copyURL} className="copyBtn">Copy</button>
+                </div>
                 </div>
             )
             :""
@@ -91,6 +95,7 @@ function Home()
                   <a
                     href={url?.originalLink}
                     target="_blank"
+                    className="originalLink"
                   >
                     {url?.originalLink}
                   </a>
@@ -99,6 +104,7 @@ function Home()
                   <a
                     href={url?.shortenLink}
                     target="_blank"
+                    className="shortLink"
                   >
                     {url?.shortenLink}
                   </a>
