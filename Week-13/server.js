@@ -68,14 +68,44 @@ app.get("/forecast", (req, res) => {
   let city = req.query.city;
   let days = parseInt(req.query.days);
   let page = req.query.page;
+  let recordsPerPage = 3;
+  
   // http://api.weatherapi.com/v1/forecast.json?key=372f208a3f284a61b4670325222910&q=GL7
   // &days=1&aqi=no&alerts=no
 
   request(
     `http://api.weatherapi.com/v1/forecast.json?key=372f208a3f284a61b4670325222910&q=${city}&days=${days}&aqi=no`,
     function (error, response, body) {
+      body  = JSON.parse(body);
+      console.log(body);
+      var forecast = [];
       if (response.statusCode === 200) {
-        res.send(`${body}`);
+        let startIndex = 0,EndIndex = 0;
+        if(days <= recordsPerPage)
+        {
+            startIndex = 0,EndIndex = days-1
+        }
+        else 
+        {
+            startIndex = recordsPerPage * (page-1);
+            if(( recordsPerPage * page) > body.forecast.forecastday.length)
+            {
+              EndIndex = body.forecast.forecastday.length  -1;
+            }
+            else
+            {
+              EndIndex = recordsPerPage * page -1;
+            }
+        }  
+        console.log(startIndex);
+        console.log(EndIndex);
+        for(var i = startIndex;i<=EndIndex;i++)
+        {
+            forecast.push(body.forecast.forecastday[i]);
+        }
+        body.forecast.forecastday = forecast;
+        console.log(body);
+        res.send(`${JSON.stringify(body)}`);
       }
     }
   );
