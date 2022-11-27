@@ -1,0 +1,60 @@
+#Box
+{
+   width: 200px;
+   height: 200px;
+   margin: 200px;
+}
+
+#Box > div
+{
+    width: 100px;
+    height: 100px;
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    float: left;
+}
+
+#Box1
+{
+    background-color: lightgreen;
+    transform-origin:top left
+}
+
+#Box2
+{
+    background-color: lightseagreen;
+    transform-origin:top right
+}
+
+#Box3
+{
+    background-color: lightsalmon;
+    transform-origin:bottom left
+}
+
+#Box4
+{
+    background-color: lightskyblue;
+    transform-origin:bottom right
+}
+
+#HiddenText
+{
+    margin: 90px 0px 0px 90px;
+    position: absolute;
+    z-index: -1;
+}
+
+#Box:hover > #Box1 {
+    transform: rotate(90deg);
+}
+#Box:hover > #Box2{
+    transform:  rotate(-90deg);
+}
+#Box:hover > #Box3 {
+    transform:  rotate(-90deg);
+}
+#Box:hover > #Box4 {
+    transform: rotate(90deg);
+}
